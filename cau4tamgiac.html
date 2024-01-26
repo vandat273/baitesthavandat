@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="nhap a" id="canha"> <br>
+<input type="number" placeholder="nhap b" id="canhb"> <br>
+<input type="number" placeholder="nhap c" id="canhc"> <br>
+<button onclick="tong()">xac nhan</button>
+<br>
+<p id="ketquala">ket qua la</p>
+
+</body>
+<script>
+    function tong(){
+        let canha= +document.getElementById("canha").value
+        let canhb= +document.getElementById("canhb").value
+        let canhc=+document.getElementById("canhc").value
+        let ketqua
+       if (canha===canhb && canhb===canhc){
+            ketqua="day la hinh tam giac deu"
+        }else if (canha===canhb || canhb===canhc){
+            ketqua="day la hinh tam giac can"
+        }else  if (canha**2 + canhb**2 ===canhc**2 || canhb**2 + canhc**2=== canha**2 || canha**2 + canhc**2===canhb**2){
+           ketqua="day la hinh tam giac vuong"
+       }else if( canha>0 && canhb>0 && canhc>0){
+           ketqua="day la hinh tam giac"
+       }else{
+           ketqua='day khong phai la hinh tam giac'
+       }
+
+
+
+
+
+        document.getElementById("ketquala").innerHTML=ketqua
+    }
+</script>
+</html>

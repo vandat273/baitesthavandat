@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="ketqua">ket qua</h1>
+<input type="text" placeholder="nhap a" id="input1">
+<input type="text" placeholder="nhap b" id="input2">
+<button onclick="input1()">xac nhan</button>
+</body>
+<script>
+    // buoc1:tao 1 the h1,dat ten va them id cho the
+    // buoc2:viet 2 cap the input1,input2 (nhap id) va 1 the button(onclick cho the)
+    // buoc3:khai bao gia tri input1 va input2 va gia tri s=input1*input2
+    //buoc4:nhap gia tri vao input1 va input 2 de xem ket qua
+
+    function input1(){
+        let input1=+document.getElementById("input1").value
+        let input2=+document.getElementById("input2").value
+        let s =input1*input2
+        document.getElementById("ketqua").innerHTML= "Ket qua ="+s
+    }
+</script>
+</html>

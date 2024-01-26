@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau4</title>
+</head>
+<body>
+<div class="caua">
+<input type="text" id="a" placeholder="nhap canh a">
+ <button onclick="inputa()">xac nhan</button>
+ <p id="c">chu vi va dien tich hinh vuong</p>
+</div>
+<br>
+<div class="caub">
+    <input type="text" id="abinh" placeholder="nhap a">
+    <input type="text" id="bbinh" placeholder="nhap b">
+    <button onclick="inputb()"> xac nhan</button>
+    <p id="ketquala">a^2= va b^2= </p>
+</div>
+    <button onclick="tongdayso()">xac nhan</button>
+    <p id="tong">tong la =</p>
+</div>
+<div>
+    <input type="number" placeholder="nhap nam" id="nam">
+    <button onclick="theky()">xac nhan</button>
+    <p id="thekila">the ki </p>
+</div>
+</body>
+<script>
+    function inputa(){
+        let a=+document.getElementById("a").value;
+        let c=a*4
+        let s=a*a
+        document.getElementById("c").innerHTML="chu vi="+c +" "+"dien tich ="+s
+    }
+    function inputb(){
+        let abinh=+document.getElementById("abinh").value;
+        let bbinh=+document.getElementById("bbinh").value;
+        let aa=abinh**2
+        let bb=bbinh**2
+        document.getElementById("ketquala").innerHTML="a^2="+ aa +" "+"b^2="+ bb
+    }
+    // function tongdayso(){
+    //     let soa=+document.getElementById("soa").value
+    //     let sob=+document.getElementById("sob").value
+    //
+    //     document.getElementById("tong").innerHTML=tongab
+    // }
+    //chi lam trong khoang tk16-th20
+    function theky(){
+         let year= +document.getElementById("nam").value
+         let theki
+        if(year/100 < 20.01 && year/100 >= 19.01){
+            theki="the ki 20"
+        } else if(year/100 < 19.01 && year/100 >= 18.01) {
+            theki = "the ki 19"
+        }else if(year/100 < 18.01 && year/100 >= 17.01) {
+            theki = "the ki 18"
+        }else if(year/100 < 17.01 && year/100 >= 16.01) {
+                theki = "the ki 17"}
+            else if(year/100 < 16.01 && year/100 >= 15.01) {
+                    theki = "the ki 16" }
+        document.getElementById("thekila").innerHTML=theki
+     }
+</script>
+</html>
